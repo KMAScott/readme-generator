@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');
+const { writeFile } = require('./utils/generate-file.js');
+const generateFile = require('./src/template.js');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -17,7 +19,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'desciption',
+            name: 'description',
             message: 'Enter a short description of your project. (Required)',
             validate: desciptionInput => {
                 if (desciptionInput) {
@@ -96,5 +98,17 @@ const promptUser = () => {
     ]);
 };
 
-promptUser().then(answers => console.log(answers));
+promptUser()
+    .then(answers => {
+        return generateFile(answers);
+    })
+    .then(templateData => {
+        return writeFile(templateData);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+    })
+    .catch(err => {
+        console.log(err);
+    });
 
