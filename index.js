@@ -4,32 +4,6 @@ const promptUser = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'githubUsername',
-            message: 'What is your GitHub Username? (Required)',
-            validate: githubUsernameInput => {
-                if (githubUsernameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter your GitHub Username!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'email',
-            message: 'What is your email address? (Required)',
-            validate: emailInput => {
-                if (emailInput) {
-                    return true;
-                } else {
-                    console.log('Please enter your email address!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
             name: 'title',
             message: 'What is the title of your project? (Required)',
             validate: titleInput => {
@@ -69,7 +43,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'dependencies',
+            name: 'installation',
             message: 'What command should be run to install dependencies? (Required)',
             validate: dependenciesInput => {
                 if (dependenciesInput) {
@@ -82,20 +56,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'tests',
-            message: 'What command should be run to run tests? (Required)',
-            validate: testsInput => {
-                if (testsInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the test command!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'useInfo',
+            name: 'usage',
             message: 'What does the user need to know about using the repo?',
             validate: userInfoInput => {
                 if (userInfoInput) {
@@ -108,13 +69,26 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'contribute',
-            message: 'What does the user need to know about contributing to the repo?',
-            validate: contributeInput => {
-                if (contributeInput) {
+            name: 'credits',
+            message: 'List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list them here. If you followed tutorials, include links to those here as well.',
+            validate: creditsInput => {
+                if (creditsInput) {
                     return true;
                 } else {
-                    console.log('Please enter contribution instructions!');
+                    console.log('Please enter information for credits.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your email address!');
                     return false;
                 }
             }
