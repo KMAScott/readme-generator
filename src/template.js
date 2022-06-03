@@ -9,7 +9,7 @@ const addScreenshot = screenshot => {
 };
 
 module.exports = templateData => {
-    const { title, description, installation, usage, screenshot, credits, email, license } = templateData;
+    const { title, description, installation, usage, screenshot, credits, contributing, tests, github, email, license } = templateData;
     return `
 ![license badge](https://img.shields.io/badge/license-${license}-informational)
 
@@ -37,12 +37,25 @@ ${addScreenshot(screenshot)}
 ## Credits
 
 ${credits}
-Contact me at : ${email}
 
 ## License
 
 ![license badge](https://img.shields.io/badge/license-${license}-informational)
 
-This repository is covered by the ${license} license.
+This application is covered by the ${license} license.
+
+## Contributing
+
+${contributing}
+
+## Tests
+
+${tests}
+
+## Questions
+
+If you have any additional questions please contact me at: ${email}
+
+https://github.com/${github}
     `;
 };

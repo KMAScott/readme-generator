@@ -15,7 +15,7 @@ This project is an app that aims to generate a professional README.md file direc
 
 ## Installation
 
-Type 'npm init' into the terminal.
+npm init
 
 ## Usage
 
@@ -27,11 +27,24 @@ Type 'node index' in the terminal to run the app. Then simply fill in the approp
 ## Credits
 
 I referenced this blog post on how to write a professional README.md file: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-Contact me at : burnbright987@gmail.com
 
 ## License
 
 ![license badge](https://img.shields.io/badge/license-MIT-informational)
 
-This repository is covered by the MIT license.
+This application is covered by the MIT license.
+
+## Contributing
+
+Contribute in any way you see fit.
+
+## Tests
+
+There are no tests included in this repository.
+
+## Questions
+
+If you have any additional questions please contact me at: burnbright987@gmail.com
+
+https://github.com/KMAScott
     

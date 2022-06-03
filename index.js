@@ -113,6 +113,29 @@ const promptUser = () => {
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is your GitHub username?',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'What does the user need to know about contributing to this project.'
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'What does the user need to know about running tests in this repository?'
+        }
     ]);
 };
 
