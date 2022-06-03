@@ -78,7 +78,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'screenshot',
-            message: 'Add your screenshot file to assets/images. Enter the name of the file here.',
+            message: 'Add your screenshot file to /assets/images. Enter the name of the file here.',
             when: ({ confirmScreenshot }) => {
                 if (confirmScreenshot) {
                     return true;

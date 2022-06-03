@@ -21,7 +21,7 @@ npm init
 
 Type 'node index' in the terminal to run the app. Then simply fill in the appropriate information when prompted. The resulting README.md file will be located in the dist folder.
 
-![A screenshot of the project](assets/images/Screenshot.png)
+![A screenshot of the project](assets/demo-video/demo.gif)
     
 
 ## Credits
