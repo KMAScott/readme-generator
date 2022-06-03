@@ -1,30 +1,37 @@
 
-    #README-generator
+![license badge](https://img.shields.io/badge/license-MIT-informational)
 
-    ## Description
+# README Generator
 
-    undefined
+## Description
 
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
+This project is an app that aims to generate a professional README.md file directly from the command line using node js.
 
-    ## Installation
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-    The command to install dependencies is 'npm init'.
+## Installation
 
-    ## Usage
+Type 'npm init' into the terminal.
 
-    The command to run the app is 'node index'. Then answer a series of prompts, filling in the appropriate information. The resulting README.md file will be located in the dist folder.
+## Usage
 
-    ## Credits
+Type 'node index' in the terminal to run the app. Then simply fill in the appropriate information when prompted. The resulting README.md file will be located in the dist folder.
 
-    https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-    Contact me at : burnbright987@gmail.com
+![A screenshot of the project](assets/images/Screenshot.png)
+    
 
-    ## License
+## Credits
 
-    MIT
+I referenced this blog post on how to write a professional README.md file: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+Contact me at : burnbright987@gmail.com
+
+## License
+
+![license badge](https://img.shields.io/badge/license-MIT-informational)
+
+This repository is covered by the MIT license.
     

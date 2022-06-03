@@ -31,17 +31,17 @@ const promptUser = () => {
             }
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'license',
-            message: 'What kind of license should your project have? (Required)',
-            validate: licenseInput => {
-                if (licenseInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the type of license!');
-                    return false;
-                }
-            }
+            message: 'Choose the appropriate license for this project:',
+            choices: [
+                'Apache',
+                'GNU',
+                'MIT',
+                'ISC',
+                'Open',
+                'Mozilla'
+            ]
         },
         {
             type: 'input',
@@ -65,6 +65,24 @@ const promptUser = () => {
                     return true;
                 } else {
                     console.log('Please enter use information for the user!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmScreenshot',
+            message: 'Would you like to include a screenshot?',
+            default: false
+        },
+        {
+            type: 'input',
+            name: 'screenshot',
+            message: 'Add your screenshot file to assets/images. Enter the name of the file here.',
+            when: ({ confirmScreenshot }) => {
+                if (confirmScreenshot) {
+                    return true;
+                } else {
                     return false;
                 }
             }
@@ -94,9 +112,10 @@ const promptUser = () => {
                     return false;
                 }
             }
-        }
+        },
     ]);
 };
+
 
 promptUser()
     .then(answers => {
